@@ -33,8 +33,15 @@
 				"leizongmin.node-module-intellisense"
 			]
 		}
-	}
+	},
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+
+	// environment variables (NOT a .env)
+	"remoteEnv": {
+		"USE_SSH": "true",
+		"GIT_USER": "kinetekenergy",
+		"GIT_PASS": "[redacted] - stored in .env"
+	}
 }
