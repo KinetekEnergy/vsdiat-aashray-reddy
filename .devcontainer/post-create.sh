@@ -1,7 +1,5 @@
 #!/bin/bash
 
-USE_SSH=true
-
 echo -e "\e[42mNode.js & Docusaurus container is active.\e[0m"
 
 echo -n "(b)uild or (s)tart website? "
