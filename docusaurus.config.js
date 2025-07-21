@@ -22,16 +22,16 @@ const config = {
     },
 
     // Set the production url of your site here
-    url: 'https://vsdiat-aashray-reddy.github.io',
+    url: 'https://vsdiat-aashray-reddy',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
-    baseUrl: '/vsdiat-aashray-reddy.github.io/',
+    baseUrl: '/vsdiat-aashray-reddy/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
     organizationName: 'kinetekenergy', // Usually your GitHub org/user name.
     deploymentBranch: 'gh-pages',
-    projectName: 'vsdiat-aashray-reddy.github.io', // Usually your repo name.
+    projectName: 'vsdiat-aashray-reddy', // Usually your repo name.
     trailingSlash: false,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -106,7 +106,7 @@ const config = {
                             },
                             {
                                 label: 'Site GitHub',
-                                href: 'https://github.com/KinetekEnergy/vsdiat-aashray-reddy.github.io',
+                                href: 'https://github.com/KinetekEnergy/vsdiat-aashray-reddy',
                             },
                         ],
                     },
