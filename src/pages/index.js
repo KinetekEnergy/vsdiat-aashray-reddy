@@ -15,7 +15,7 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle" style={{ textAlign: "center" }}>{siteConfig.tagline}</p>
         <a href="/docs/intro" class="pagination-nav__link hero__link">
           <div class="pagination-nav__sublabel hero__button">Let's Go!</div></a>
       </div>

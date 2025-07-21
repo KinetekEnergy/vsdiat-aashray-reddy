@@ -12,9 +12,9 @@ import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'Learn Physics E&M',
-    tagline: 'A comprehensive AP Physics E&M guide by DNHS students — for DNHS and students everywhere.',
-    favicon: 'img/favicon2.ico',
+    title: 'Aashray Reddy\'s VSDIAT',
+    tagline: 'A site for all of my notes on the VSDIAT course.',
+    favicon: 'img/favicon.ico',
 
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
     future: {
@@ -22,16 +22,16 @@ const config = {
     },
 
     // Set the production url of your site here
-    url: 'https://learn-physics-enm.github.io',
+    url: 'https://vsdiat-aashray-reddy.github.io',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'learn-physics-enm', // Usually your GitHub org/user name.
+    organizationName: 'kinetekenergy', // Usually your GitHub org/user name.
     deploymentBranch: 'gh-pages',
-    projectName: 'learn-physics-enm.github.io', // Usually your repo name.
+    projectName: 'vsdiat-aashray-reddy.github.io', // Usually your repo name.
     trailingSlash: false,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
@@ -78,7 +78,7 @@ const config = {
 
             // navbar settings
             navbar: {
-                title: 'Learn Physics E&M',
+                title: 'AR VSDIAT',
                 logo: {
                     alt: 'Default Logo',
                     src: 'img/logo-dynamic-light.png',
@@ -89,14 +89,28 @@ const config = {
                         type: 'docSidebar',
                         sidebarId: 'materialSidebar',
                         position: 'left',
-                        label: 'Course Content',
+                        label: 'VSDIAT Notes & Content',
                     },
                 ],
             },
 
             // add a footer
             footer: {
-                // code here
+                links: [
+                    {
+                        title: 'Open source is love ❤️',
+                        items: [
+                            {
+                                label: 'My GitHub',
+                                href: 'https://github.com/KinetekEnergy',
+                            },
+                            {
+                                label: 'Site GitHub',
+                                href: 'https://github.com/KinetekEnergy/vsdiat-aashray-reddy.github.io',
+                            },
+                        ],
+                    },
+                ],
             },
 
             prism: {

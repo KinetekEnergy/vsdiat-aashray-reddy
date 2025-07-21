@@ -1,5 +1,7 @@
 # Website
 
+## Useful Info
+
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 **Important:** do NOT touch any files in the `build` folder. You must write your documentation in the `docs` folder.
@@ -20,7 +22,7 @@ Want the change the style of something? Go to the `src/css/custom.css` folder. I
     - You can set your file name here. Set Where to Download. This saves it locally to your computer.
     - Drag the SVG file to the site files and place it where you need it to be.
 
-## Using Docker
+## Development Environment
 
 1. Pull the docker image using `docker pull kinetekenergy/learn-physics-enm:latest`. You can view it [here](https://hub.docker.com/repository/docker/kinetekenergy/learn-physics-enm/general) on DockerHub.
 2. Run `docker compose up --build` to start the site.
@@ -29,28 +31,6 @@ Want the change the style of something? Go to the `src/css/custom.css` folder. I
 4. Changes made to docs should update instantly
 
 Note: when building the site, docusaurus will give unsupported file type errors for the SVGs. Ignore them.
-
-## Installation
-
-```bash
-yarn
-```
-
-## Local Development
-
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
 ## Deployment
 
