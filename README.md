@@ -24,6 +24,15 @@ Want the change the style of something? Go to the `src/css/custom.css` folder. I
 
 ## Development Environment
 
+### Devcontainers
+
+1. Open the Devcontainer
+2. Run `npm install` to install packages
+3. Run `npm run start` to start the site
+4. Go to `http://localhost:3000` to view the site
+
+### Docker
+
 1. Pull the docker image using `docker pull kinetekenergy/learn-physics-enm:latest`. You can view it [here](https://hub.docker.com/repository/docker/kinetekenergy/learn-physics-enm/general) on DockerHub.
 2. Run `docker compose up --build` to start the site.
    1. Run `docker compose down` to stop the site.
