@@ -27,9 +27,10 @@ Want the change the style of something? Go to the `src/css/custom.css` folder. I
 ### Devcontainers
 
 1. Open the Devcontainer
-2. Run `npm install` to install packages
-3. Run `npm run start` to start the site
-4. Go to `http://localhost:3000` to view the site
+2. Run `npm run start` to start the site or `npm run build` to build the site
+3. Go to `http://localhost:3000` to view the site
+
+Note: you might have to do `dos2unix post-create.sh`.
 
 ### Docker
 

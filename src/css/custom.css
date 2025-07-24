@@ -70,7 +70,7 @@
 
 /* style images in blogs to be smaller and round corners */
 .img_ev3q {
-    max-width: 35vh;
+    /* max-width: 35vh; */
     border-radius: var(--border-radius);
 }
 
