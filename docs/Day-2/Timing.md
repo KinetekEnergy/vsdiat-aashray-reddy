@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # Timing
 
-## Timing Threshhold Definitions
+## Timing Threshold Definitions
 
 Consider the following circuit:
 
@@ -20,7 +20,7 @@ Notice the following timing threshold definitions:
 
 ![Another timing chart](./Timing-Images/timing-charts-2.png)
 
-## Propogation Delay
+## Propagation Delay
 
 Propagation delay is calculated as:
 

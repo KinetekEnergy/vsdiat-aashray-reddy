@@ -20,7 +20,7 @@ Here is an example output from a SPICE simulation:
 
 ![Example output from spice simulation](./CMOS-NGSPICE-Images/spice-sim.png)
 
-The input parameters are what change the CMOS' switching threshold and propogation delay. Because the graph shapes are similar, we know the CMOS is working properly and consistently.
+The input parameters are what change the CMOS' switching threshold and propagation delay. Because the graph shapes are similar, we know the CMOS is working properly and consistently.
 
 ### Switching Threshold
 
@@ -28,6 +28,6 @@ The input parameters are what change the CMOS' switching threshold and propogati
 
 When the input and output voltage are equivalent, that means the PMOS and NMOS are in the saturation region. This is the switching threshold. At that point, the chances of leakage are increased.
 
-### Propogation Delay
+### Propagation Delay
 
 ![Propogation delay graph](./CMOS-NGSPICE-Images/prop-delay.png)

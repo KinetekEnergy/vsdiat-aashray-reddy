@@ -33,7 +33,7 @@ RTL code is turned into a netlist, or a circuit. It converts them by using a sta
 
 All parts of the chip undergo floor planning. This means placing components and optimizing where they are put. It helps to minimize wire length, reduce signal delay, optimize power distribution, and ensure the chip's area is efficiently used.
 
-Power planning helps to create a power grid using VDD/VSS ports. Planning helps to ensure all componenets get the right amount of power, and it makes sure that the power is steady and consistent (minimizing voltage drops/spikes, noise, etc).
+Power planning helps to create a power grid using VDD/VSS ports. Planning helps to ensure all components get the right amount of power, and it makes sure that the power is steady and consistent (minimizing voltage drops/spikes, noise, etc).
 
 ![Chip power planning in detail](./SoC-Design-and-Openlane-Images/power-planning.png)
 
@@ -41,7 +41,7 @@ Power planning helps to create a power grid using VDD/VSS ports. Planning helps 
 
 ![Chip placement](./SoC-Design-and-Openlane-Images/placement.png)
 
-Each componenet needs to be properly placed on the chip. Standard cells are placed in rows as defined by the floor plan.
+Each component needs to be properly placed on the chip. Standard cells are placed in rows as defined by the floor plan.
 
 The placement is a two step process:
 
@@ -52,13 +52,13 @@ The placement is a two step process:
 
 ![Clock tree synthesis](./SoC-Design-and-Openlane-Images/cts.png)
 
-The clock distribution network is built. This ensure the clock signal is delivered to any components that need it and makes sure that the clock signal is synchronized with all parts.
+The clock distribution network is built. This ensures the clock signal is delivered to any components that need it and makes sure that the clock signal is synchronized with all parts.
 
 #### Routing (Route)
 
 All physical wires, or interconnects, are added. It connects the cells and the metal layers.
 
-The Skywater 130nm PDK (SKY130) as 6 layers. The lowest is titanium nitride and is for the interconnects. The rest are aluminum.
+The Skywater 130nm PDK (SKY130) has 6 layers. The lowest is titanium nitride and is for the interconnects. The rest are aluminum.
 
 Similar to the placement stage, routing is done in two steps:
 
@@ -75,7 +75,7 @@ The design undergoes:
    1. **Design Rules Checking (DRC):** makes sure the design abides by manufacturing rules. This prevents fabrication defects and errors.
    2. **Layout vs. Schematic (LVS):** confirms that the manufactured layout is the same as the original circuit schematic
 2. **Timing verification**
-   1. **Static Timing Analysis (STA):** makes sure the chip meets the required performance/speed needs. Also makes sure the clock is working properly.
+   1. **Static Timing Analysis (STA):** makes sure the chip meets the required performance/speed needs. Also make sure the clock is working properly.
 
 ## OpenLANE and StriVe
 
@@ -88,7 +88,7 @@ The workflow is described below:
 1. **Synthesis Exploration:** a report comparing delay and area is generated.
 2. **Design Exploration:** performance metrics for different layouts and configurations are calculated. Regression testing is also performed to find the best configuration for a design.
 3. **Design For Test (DFT):** logic is added to make chips testable after production.
-4. **Physical Implementation (PnR):** OpenROAD automatically performes the placing and routing.
+4. **Physical Implementation (PnR):** OpenROAD automatically performs the placing and routing.
    1. **Logic Equivalence Check (LEC):** the circuit's functions are verified. This ensures that everything works as it was described by the design files. The reason is because during optimization or CTS, the circuit can change. We don't want any errors to pop up afterwards.
    2. **Antenna Diodes:** long metal wires act as antennas, collecting charge that can damage the chip. Any wires that act as antennas need to be dealt with properly.
 

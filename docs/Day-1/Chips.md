@@ -2,7 +2,6 @@
 sidebar_position: 1
 ---
 
-
 # Chip Overview
 
 A chip is a package of circuits, containing many electronic components (often millions) like transistors. These components are arranged to form electronic circuits to perform functions like processing and storing data.
@@ -15,7 +14,7 @@ A chip is a package of circuits, containing many electronic components (often mi
 
 All chips have a way to interface and communicate with external data. Often, this is through data pins.
 
-Pads help to form a bridge between the chip's internals and the outside world. Signals are send through the pads and into the chips.
+Pads help to form a bridge between the chip's internals and the outside world. Signals are sent through the pads and into the chips.
 
 ### Core
 

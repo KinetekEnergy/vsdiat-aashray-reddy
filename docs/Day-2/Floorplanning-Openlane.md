@@ -44,6 +44,7 @@ Run `nano picorv32a.floorplan.def` to view the reports.
     // highlight-next-line
     DIE AREA ( 0 0 ) (660685 671405) ;
 
+
     [content hidden]
 ```
 
@@ -61,7 +62,7 @@ Die area in microns = $length \times width = 660.685 \times 671.405 = 443587.212
 
 ## View the Floorplan in Magic
 
-Let's open the flooplan in Magic. Make sure that you are in the same directory as you were before for the floorplan.
+Let's open the floor plan in Magic. Make sure that you are in the same directory as you were before for the floorplan.
 
 ```bash showLineNumbers title="vsduser@vsdsquadron: ~/Desktop/work/tools/openlane_working_dir/openlane"
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
@@ -89,8 +90,10 @@ You can hit `S` on your keyboard to select the chip. Then, hit `V` to scale it t
 # run the placement
 run_placement
 
+
 # open generated placement def
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/{date}/results/placement/
+
 
 # open with magic
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &

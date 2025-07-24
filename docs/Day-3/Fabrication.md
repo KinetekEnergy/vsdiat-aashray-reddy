@@ -18,7 +18,7 @@ The fabrication process is 16 steps long:
    6. Remove mask-1.
    7. Remove photoresist.
    8. Place the chip in a furnace to grow more oxide.
-   9. Use hot phosporic acid to remove Si3N4. This leaves only the substrate and SiO2.
+   9. Use hot phosphoric acid to remove Si3N4. This leaves only the substrate and SiO2.
 
 ## Form N-Well and P-Well
 
@@ -26,23 +26,23 @@ The fabrication process is 16 steps long:
    1. Deposit a layer of photoresist
    2. Place mask-2 and mask-3. Mask-2 protects N-Well during P-Well fabrication and Mask-3 protects P-Well during N-Well fabrication
    3. Apply UV light to remove photoresist
-   4. Place the chip in a furnace to add boron and phorphorus to form the wells.
+   4. Place the chip in a furnace to add boron and phosphorus to form the wells.
 
 ## Gate Terminal
 
 4. Make the gate.
-   1. Add photoresist layer.
+   1. Add a photoresist layer.
    2. Add mask-4.
    3. Apply UV light to remove unmasked photoresist.
    4. Use a low energy beam of boron on the P-Well surface.
    5. Apply mask-5.
-   6. Add phorphoros/arsenic to N-Well.
-   7. Use hydroflouric acid to remove SiO2.
+   6. Add phosphorus/arsenic to N-Well.
+   7. Use hydrofluoric acid to remove SiO2.
    8. Regrow higher quality SiO2 on substrate.
    9. Add polysilicon film.
    10. Add mask-6.
    11. Etch using photolithography.
-   12. Remove mask-6. Gate terminal is formed.
+   12. Remove mask-6. The gate terminal is formed.
 
 ## Lightly Doped Drain (LDD)
 
@@ -69,11 +69,11 @@ The fabrication process is 16 steps long:
 ## High Level Metal
 
 8. Make high-level metal
-   1. Add a doped layer of SiO2 (doped w/ phorphorus or boron) on wafer surface
+   1. Add a doped layer of SiO2 (doped w/ phosphorus or boron) on wafer surface
    2. Polish surface with Chemical Mechanical Polishing (CMP) to make surface flat
    3. Add contact holes via photolithography
    4. Add mask-12 for first contacts
    5. Add mask-13 for aluminum contact
-   6. Add mask-14 for second contacs
+   6. Add mask-14 for second contacts
    7. Add mask-15 for second aluminum contacts
    8. Add mask-16 for making contact to uppermost layer

@@ -10,11 +10,14 @@ sidebar_position: 3
 # go to home
 cd
 
-# donwload lab files
+
+# download lab files
 wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+
 
 # extract it
 tar xfz drc_tests.tgz
+
 
 # open lab folder
 cd drc_tests
@@ -26,10 +29,12 @@ cd drc_tests
 # show files
 ls -al
 
+
 # open .magicrc (close by with Ctrl + X)
 nano .magicrc
 
-# open it in magix
+
+# open it in magic
 magic -d XR &
 ```
 
@@ -53,10 +58,12 @@ Here is the change we made to the `.tech` file to fix the DRC error::
 # load new tech file
 tech load sky130A.tech
 
+
 # re-run DRC
 drc check
 
-# select region with new errors 
+
+# select region with new errors
 drc why
 ```
 

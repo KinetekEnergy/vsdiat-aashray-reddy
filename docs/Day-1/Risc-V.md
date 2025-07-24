@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Risc-V
 
-RISC-V is an instruction set architechture (ISA). The ISA is how software communicates with the hardware, and it is the interface between the two.
+RISC-V is an instruction set architecture (ISA). The ISA is how software communicates with the hardware, and it is the interface between the two.
 
 Common ISAs include:
 
@@ -30,6 +30,6 @@ Application software are the apps that you use everyday. They are things like we
 
 All apps sit on top of the system software, or the OS. The OS contains software, like compilers and assemblers, along with software to handle input/output (IO), memory management, and other low level functions. The OS is what turns apps into machine language and runs it on the hardware.
 
-The hardware is the lowest layer. This is where the apps that were converted into machine language by the OS are ran.
+The hardware is the lowest layer. This is where the apps that were converted into machine language by the OS are run.
 
 The overall work flow is: App → System software (OS → Compiler → Assembler) → Hardware
