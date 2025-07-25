@@ -28,9 +28,9 @@ function ScrollingBanner() {
     return (
 
         <>
-            <div class="wrapper">
+            <div class="wrapper-scrolling">
                 <div class="text-scrolling">
-                    <div class="row row-1">
+                    <div class="row-scroller row-1">
                         <p>
                             <span class="rubik-80s-fade-regular">El código abierto es amor ❤️</span> 
                             <span class="vt"> &gt;&gt; Open source is love &lt;&lt;</span><span> ❤️ </span> 
@@ -39,7 +39,7 @@ function ScrollingBanner() {
                             <span class="bitcount">Sumber terbuka adalah cinta ❤️</span>
                         </p>
                     </div>
-                    <div class="row row-2">
+                    <div class="row-scroller row-2">
                         <p>
                             <span class="alfa-slab-one-regular">Chanzo wazi ni upendo ❤️</span>
                             <span class="liu-jian-mao-cao-regular">开源就是爱 ❤️</span>
@@ -47,7 +47,7 @@ function ScrollingBanner() {
                             <span class="reem-kufi">المصدر المفتوح هو الحب ❤️</span>
                         </p>
                     </div>
-                    <div class="row row-3">
+                    <div class="row-scroller row-3">
                         <p>
                             <span class="dancing-script">Nguồn mở là tình yêu ❤️</span>
                             <span class="akaya-telivigala-regular">ఓపెన్ సోర్స్ ప్రేమ ❤️</span>
