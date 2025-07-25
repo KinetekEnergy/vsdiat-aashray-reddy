@@ -4,6 +4,24 @@
  * work well for content-centric websites.
  */
 
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https: //fonts.googleapis.com");
+@import url("https: //fonts.gstatic.com");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap');
+
+
 /* You can override the default Infima variables here. */
 :root {
     --ifm-color-primary: #6750A4;
@@ -109,4 +127,221 @@ p {
 /* makes the padding even for the navigation pane */
 .menu.thin-scrollbar.menu_SIkG {
     padding-right: 8px;
+}
+
+/* scrolling text ======================================= */
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Montserrat', monospace;
+    text-transform: uppercase;
+    /* font-family: "Montserrat", sans-serif; */
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding-left: 25px;
+    padding-right: 25px;   
+
+-webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);}
+
+/* .fade {
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 999;
+    background: linear-gradient(to right, white, transparent 90%);
+} */
+
+.text-scrolling {
+    width: 100%;
+
+    
+}
+
+.vt {
+    font-family: "VT323", monospace;
+    font-weight: 1000;
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.alfa-slab-one-regular {
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.potta-one-regular {
+    font-family: "Potta One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kalam-bold {
+    font-family: "Kalam", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.liu-jian-mao-cao-regular {
+    font-family: "Liu Jian Mao Cao", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.reem-kufi {
+    font-family: "Reem Kufi", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.akaya-telivigala-regular {
+    font-family: "Akaya Telivigala", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-glitch-regular {
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.rubik-80s-fade-regular {
+    font-family: "Rubik 80s Fade", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.fugaz-one-regular {
+    font-family: "Fugaz One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bitcount {
+    font-family: "Bitcount", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0;
+}
+
+.playwrite-au-qld {
+    font-family: "Playwrite AU QLD", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.row {
+    overflow: hidden;
+    height: 80px;
+    position: relative;
+}
+
+.row p {
+    position: absolute;
+    min-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.row p span,
+.row p:after {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    white-space: nowrap;
+    top: 0;
+}
+
+.row-1 p {
+    animation: scrolling-type-1 30s infinite linear;
+}
+
+.row-2 p {
+    animation: scrolling-type-2 30s infinite linear;
+}
+
+.row-3 p {
+    animation: scrolling-type-3 30s infinite linear;
+}
+
+
+
+@keyframes scrolling-type-1 {
+    0% {
+        transform: translate(10%, 0%);
+        opacity: 0%;
+    }
+
+    10% {
+        opacity: 100%;
+    }
+
+    90% {
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translate(-100%, 0%);
+        opacity: 0%;
+    }
+}
+
+@keyframes scrolling-type-2 {
+    0% {
+        transform: translate(50%, 0%);
+        opacity: 0%;
+    }
+
+    10% {
+        opacity: 100%;
+    }
+
+    90% {
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translate(-100%, 0%);
+        opacity: 0%;
+    }
+}
+
+@keyframes scrolling-type-3 {
+    0% {
+        transform: translate(25%, 0%);
+        opacity: 0%;
+    }
+
+    10% {
+        opacity: 100%;
+    }
+
+    90% {
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translate(-100%, 0%);
+        opacity: 0%;
+    }
 }
