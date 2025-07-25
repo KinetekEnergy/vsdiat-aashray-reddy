@@ -3,23 +3,7 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
-
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@import url("https: //fonts.googleapis.com");
-@import url("https: //fonts.gstatic.com");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Liu+Jian+Mao+Cao&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap');
+@import url('./fonts.css');
 
 
 /* You can override the default Infima variables here. */
@@ -139,8 +123,6 @@ p {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    padding-left: 25px;
-    padding-right: 25px;   
 
     -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
@@ -148,90 +130,6 @@ p {
 
 .text-scrolling {
     width: 100%;
-}
-
-.vt {
-    font-family: "VT323", monospace;
-    font-weight: 1000;
-    font-style: normal;
-    text-decoration: underline;
-}
-
-.alfa-slab-one-regular {
-    font-family: "Alfa Slab One", serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.potta-one-regular {
-    font-family: "Potta One", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.kalam-bold {
-    font-family: "Kalam", cursive;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.liu-jian-mao-cao-regular {
-    font-family: "Liu Jian Mao Cao", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.reem-kufi {
-    font-family: "Reem Kufi", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-.akaya-telivigala-regular {
-    font-family: "Akaya Telivigala", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.rubik-glitch-regular {
-    font-family: "Rubik Glitch", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.rubik-80s-fade-regular {
-    font-family: "Rubik 80s Fade", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.dancing-script {
-    font-family: "Dancing Script", cursive;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-
-.fugaz-one-regular {
-    font-family: "Fugaz One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.bitcount {
-    font-family: "Bitcount", system-ui;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-variation-settings:
-        "slnt" 0,
-        "CRSV" 0.5,
-        "ELSH" 0,
-        "ELXP" 0;
-}
-
-.playwrite-au-qld {
-    font-family: "Playwrite AU QLD", cursive;
-    font-optical-sizing: auto;
-    font-style: normal;
 }
 
 .row-scroller {
