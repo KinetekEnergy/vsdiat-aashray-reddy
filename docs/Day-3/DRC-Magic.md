@@ -54,17 +54,15 @@ Here is the change we made to the `.tech` file to fix the DRC error::
 
 ## Run DRC Again
 
-```bash showLineNumbers title="tkcon 2.3 Main"
+```bash title="tkcon 2.3 Main"
 # load new tech file
-tech load sky130A.tech
-
+% tech load sky130A.tech
 
 # re-run DRC
-drc check
-
+% drc check
 
 # select region with new errors
-drc why
+% drc why
 ```
 
 After fixing all the errors, the designs will work properly.

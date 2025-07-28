@@ -50,18 +50,18 @@ Here is the PMOS:
 
 ## SPICE Extraction
 
-```bash showLineNumbers title="tkcon 2.3 Main"
+```bash title="tkcon 2.3 Main"
 # verify where you are
-pwd
+% pwd
 
 # extract to .ext
-extract all
+% extract all
 
 # enable parasitic extraction
-ext2spice cthresh 0 rthresh 0
+% ext2spice cthresh 0 rthresh 0
 
 # convert ext -> spice
-ext2spice
+% ext2spice
 ```
 
 ![Spice extraction](./Inverter-Magic-Images/extract.png)
