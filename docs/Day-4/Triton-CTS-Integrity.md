@@ -10,13 +10,13 @@ sidebar_position: 5
 
 ![h-tree cts 2](./Triton-CTS-Integrity-Images/h-tree-2.png)
 
-In thefirst image figure above, the **CLK port** connects to the clock pins of various **flip-flops**, based on connectivity information. However, in this example, the connections were made without considering physical factors — resulting in a situation where **t₂ > t₁**, meaning the clock arrives later at one flip-flop than the other.
+In the first image figure above, the **CLK port** connects to the clock pins of various **flip-flops**, based on connectivity information. However, in this example, the connections were made without considering physical factors — resulting in a situation where $t_{2} \gt t_{1}$, meaning the clock arrives later at one flip-flop than the other.
 
 This difference in arrival time is called **clock skew**.
 
 ### Clock Skew
 
-**Clock skew** is the **variation in arrival times** of the clock signal at different points within a synchronous system. More specifically, it is the **difference in propagation delay** of the clock signal as it travels through different paths to reach flip-flops.
+Clock skew is the variation in arrival times of the clock signal at different points within a synchronous system. More specifically, it is the difference in propagation delay of the clock signal as it travels through different paths to reach flip-flops.
 
 Skew can be caused by:
 
@@ -29,7 +29,7 @@ As a result, some parts of the circuit may receive the clock **earlier or later*
 
 :::note
 
-Ideally, skew should be as close to zero as possible.
+Ideally, the skew should be as close to zero as possible.
 
 :::
 
@@ -62,8 +62,5 @@ To address this, **clock buffers (repeaters)** are inserted at regular intervals
 
 ### Clock vs Data Buffers: Key Differences
 
-* **Clock Buffers:**
-  Designed with **equal rise and fall times** to maintain **symmetric timing** across the clock network — essential for predictable timing closure.
-
-* **Data Buffers:**
-  Rise and fall times may **differ** depending on signal conditions, load, and logic behavior. The emphasis here is on **functional correctness** rather than perfect symmetry.
+* **Clock Buffers:** Designed with equal rise and fall times to maintain symmetric timing across the clock network — essential for predictable timing closure.
+* **Data Buffers:** Rise and fall times may differ depending on signal conditions, load, and logic behavior. The emphasis here is on functional correctness rather than perfect symmetry.

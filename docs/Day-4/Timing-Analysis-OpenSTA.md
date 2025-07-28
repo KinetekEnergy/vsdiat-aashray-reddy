@@ -72,10 +72,8 @@ Unlike setup analysis (which spans two consecutive rising edges), hold analysis 
 
 :::[Note]
 
-* Clock period (T) and setup uncertainty (SU) are irrelevant in hold analysis
-  (since the same rising clock edge is used at both launch and capture flops)
+* Clock period (T) and setup uncertainty (SU) are irrelevant in hold analysis (since the same rising clock edge is used at both launch and capture flops)
 * Instead, focus is placed on:
-
   * Combinational delay
   * Clock path skews ($\Delta_{1}$ and $\Delta_{2}$)
   * Hold time requirement of the capture flop
@@ -124,7 +122,7 @@ run_synthesis
 
 There should be a `pre_sta.conf` file in the OpenLANE directory.
 
-Run `nano pre_sta.conf` to view it's contents:
+Run `nano pre_sta.conf` to view its contents:
 
 ![pre sta conf contents](./Timing-Analysis-OpenSTA-Images/sta-conf.png)
 
@@ -154,8 +152,10 @@ You can replace the weak gate and then re-run the analysis:
 report_net -connections _11672_
 help replace_cell
 
+
 # this replaces the cell
 replace_cell _14513_ sky130_fd_sc_hd__or3_4
+
 
 # generate a timing report
 report_checks -fields {net cap slew input_pins} -digits 4

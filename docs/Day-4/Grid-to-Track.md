@@ -8,7 +8,7 @@ sidebar_position: 1
 
 In the routing phase, we need to convert between the grid-based routing into track-based routing.
 
-Grid-based routing is when we divide a region into a grid. We restric routing paths to the grid lines. The space between each grid line is the *wire pitch.* Grid-bases routing is easier to implement, but it doesn't work well for modern chip designs. This is because grid-based routing can't address complex routing challenges such as mixed-size macros and varying height/width constraints.
+Grid-based routing is when we divide a region into a grid. We restrict routing paths to the grid lines. The space between each grid line is the *wire pitch.* Grid-based routing is easier to implement, but it doesn't work well for modern chip designs. This is because grid-based routing can't address complex routing challenges such as mixed-size macros and varying height/width constraints.
 
 Track-based routing is what most modern chips use. Instead of a grid, we define a set of parallel routing tracks. The tracks are the channels where wires will be placed. The dimensions of the tracks are defined by the design rules of the technology node. So, the dimensional information of a 130nm node will be significantly different than a 2nm node.
 
@@ -20,6 +20,7 @@ Let's first check our track information.
 
 ```bash showLineNumbers title="vsduser@vsdsquadron: ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd"
 # go to /Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd
+
 
 # open the tracks.info file
 less tracks.info
@@ -44,11 +45,12 @@ met5 Y 1.70 3.40
 
 ### Open the Design in Magic
 
-We need to open our chip design in Magic. This let's us view everything in a easy-to-use GUI.
+We need to open our chip design in Magic. This lets us view everything in an easy-to-use GUI.
 
 ```bash showLineNumbers
 # go to the vsdstdcelldesign folder
 cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
+
 
 # open it in magic
 magic -T sky130A.tech sky130_inv.mag &
@@ -61,6 +63,7 @@ magic -T sky130A.tech sky130_inv.mag &
 ```bash title="tkcon 2.3 Main"
 # show grid commands
 % help grid
+
 
 # set the grid
 % grid 0.46um 0.34um 0.23um 0.17um
@@ -78,6 +81,7 @@ Notice how the grid has been properly set and you can see the grid lines:
 Root cell box:
            width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
 
+
 microns:   1.380 x 0.310   ( 0.000,  0.850), ( 1.380,  1.160)  0.428  
 lambda:      138 x 31      (     0,  85   ), (   138,  116  )  4278      
 ```
@@ -87,6 +91,7 @@ lambda:      138 x 31      (     0,  85   ), (   138,  116  )  4278
 % box
 Root cell box:
            width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
+
 
 microns:   0.400 x 2.720   ( 0.450,  0.000), ( 0.850,  2.720)  1.088  
 lambda:       40 x 272     (     45,  0   ), (   85,  272  )   10880      
@@ -98,7 +103,7 @@ Save:
 
 ```bash title="tkcon 2.3 Main"
 # save layout with name
-% save sky130_vsdinv.mag     
+% save sky130_vsdinv.mag    
 ```
 
 Open:
@@ -110,13 +115,13 @@ magic -T sky130A.tech sky130_vsdinv.mag &
 
 ### Generate Lef
 
-The LEF file (Library Exchange Format) will represent the physical layout information of the circuit's components. It's just a simplified and abstracted way view of the physical layout. It will be used by the place and route tools.
+The LEF file (Library Exchange Format) will represent the physical layout information of the circuit's components. It's just a simplified and abstracted view of the physical layout. It will be used by the place and route tools.
 
 The LEF defines the physical characteristics of standard cells, macros, etc.
 
 ```bash title="tkcon 2.3 Main"
 # make the lef
-% lef write     
+% lef write    
 ```
 
 ![lef file opened](./Grid-to-Track-Images/lef.png)
@@ -127,8 +132,10 @@ The LEF defines the physical characteristics of standard cells, macros, etc.
 # copy LEF
 cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 
-# copy lib 
+
+# copy lib
 cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
+
 
 # verify the files are there
 ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
@@ -149,6 +156,7 @@ set ::env(LIB_FASTEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc
 set ::env(LIB_SLOWEST) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib"
 set ::env(LIB_TYPICAL) "$::env(OPENLANE_ROOT)/designs/picorv32a/src/sky130_fd_sc_hd__typical.lib"
 
+
 set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/src/*.lef]
 ```
 
@@ -158,15 +166,18 @@ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/sr
 # go to the dir
 cd Desktop/work/tools/openlane_working_dir/openlane
 
+
 # open docker env -> openlane -> picorv32a
 docker
 ./flow.tcl -interactive
 package require openlane 0.9
 prep -design picorv32a
 
+
 # set and add our new lefs
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
+
 
 # run the synthesis
 run_synthesis
@@ -190,27 +201,35 @@ Let's fix the issue:
 # re-prep to update everything
 prep -design picorv32a -tag 24-03_10-03 -overwrite
 
+
 # add the lef
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 
+
 # display SYNTH_STRATEGY
 echo $::env(SYNTH_STRATEGY)
+
 
 # set new SYNTH_STRATEGY
 set ::env(SYNTH_STRATEGY) "DELAY 3"
 
+
 # display SYNTH_BUFFERING
 echo $::env(SYNTH_BUFFERING)
+
 
 # display current SYNTH_SIZING
 echo $::env(SYNTH_SIZING)
 
+
 # set new  SYNTH_SIZING
 set ::env(SYNTH_SIZING) 1
 
-# display SYNTH_DRIVING_CELL 
+
+# display SYNTH_DRIVING_CELL
 echo $::env(SYNTH_DRIVING_CELL)
+
 
 # synthesize again
 run_synthesis
@@ -229,6 +248,7 @@ Our slack issues are fixed:
 init_floorplan
 place_io
 tap_decap_or
+
 
 # placement
 run_placement
@@ -261,11 +281,12 @@ detailed_placement
 # open generated def. remember to change <date> to your latest run (or the run you're using right now)
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/<date>/results/placement/
 
+
 # load the def in magic now
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &
 ```
 
-**Disclaimer:** the following images were taken from the lecture. I noticed that the results I was getting wasn't the same as what the professor got. I wasn't sure if it would be a major deal, but I am choosing to play it safe and use their images instead. Don't worry, only a couple images are not mine!
+**Disclaimer:** The following images were taken from the lecture. I noticed that the results I was getting weren't the same as what the professor got. I wasn't sure if it would be a major deal, but I am choosing to play it safe and use their images instead. Don't worry, only a couple images are not mine!
 
 ![placement def in magic](./Grid-to-Track-Images/placement-def.png)
 
@@ -274,8 +295,7 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ### Connectivity Layers
 
 ```bash title="tkcon 2.3 Main"
-% expand   
+% expand  
 ```
 
 ![expand](./Grid-to-Track-Images/expand.png)
-

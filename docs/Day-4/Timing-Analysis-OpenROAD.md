@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## Use OpenROAD
 
-Make sure you ran the CTS from the previous article. Then, run the following:
+Make sure you run the CTS from the previous article. Then, run the following:
 
 ```bash showLineNumbers
 # use openROAD
@@ -99,4 +99,3 @@ echo $::env(CTS_CLK_BUFFER_LIST)
 ```
 
 ![skew reports](./Timing-Analysis-OpenROAD-Images/skew.png)
-
