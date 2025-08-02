@@ -30,17 +30,8 @@ Want to the change the style of something? Go to the `src/css/custom.css` folder
 2. Run `npm run start` to start the site or `npm run build` to build the site
 3. Go to `http://localhost:3000` to view the site
 
-Note: you might have to do `dos2unix post-create.sh`.
-
-### Docker
-
-1. Pull the docker image using `docker pull kinetekenergy/learn-physics-enm:latest`. You can view it [here](https://hub.docker.com/repository/docker/kinetekenergy/learn-physics-enm/general) on DockerHub.
-2. Run `docker compose up --build` to start the site.
-   1. Run `docker compose down` to stop the site.
-3. Go to `http://localhost:3000/` in your browser to see the site.
-4. Changes made to docs should update instantly
-
-Note: when building the site, docusaurus will give unsupported file type errors for the SVGs. Ignore them.
+- Note: you might have to do `dos2unix post-create.sh`.
+- Note: when building the site, docusaurus will give unsupported file type errors for the SVGs. Ignore them.
 
 ## Deployment
 
@@ -67,3 +58,4 @@ I would highly recommend checking out [this link](https://docusaurus.io/docs/dep
 ## Design
 
 Thr color scheme comes from [Google's Material 3](https://m3.material.io/styles/color/static/baseline).
+
