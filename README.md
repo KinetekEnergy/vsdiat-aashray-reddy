@@ -2,7 +2,7 @@
 
 ## Useful Info
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator. As always, it is best to read their documentation for help because some of the information here could be wrong or outdated. Use it at your own risk!
 
 **Important:** do NOT touch any files in the `build` folder. You must write your documentation in the `docs` folder.
 **Important:** do NOT modify the `node_modules` folder and do NOT remove it from the `.gitignore`.
@@ -44,6 +44,8 @@ Note: when building the site, docusaurus will give unsupported file type errors 
 
 ## Deployment
 
+**I would suggest using GitHub pages.**
+
 Using SSH:
 
 ```bash
@@ -56,8 +58,13 @@ Not using SSH:
 GIT_USER=<Your GitHub username> yarn deploy
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+### GitHub Pages
+
+I would highly reccomend checking out [this link](https://docusaurus.io/docs/deployment#deploying-to-github-pages) that describes how to deploy using Pages. Pages is really easy to use and is what this site uses.
+
+**Important:** once GitHub Pages is setup, you don't ever have to worry about it. The site automatically rebuilds when you make a commit, so you don't need to type any commands to build it. It's easy and automatic!
 
 ## Design
 
 Our color scheme comes from [Google's Material 3](https://m3.material.io/styles/color/static/baseline).
+
