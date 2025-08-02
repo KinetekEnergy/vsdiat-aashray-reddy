@@ -52,7 +52,7 @@ A finished standard cell library includes:
 * **Timing and Noise Models:** Liberty (.lib) files for synthesis and static timing analysis
 * **Parasitic Data:** Resistance, capacitance, and noise behavior for accurate post-layout simulation.
 
-:::warning
+:::danger
 
 The entire cell design must **strictly follow foundry DRC and LVS rules** — any violations can cause the cell to fail manufacturing checks or introduce errors when integrated in a real chip.
 

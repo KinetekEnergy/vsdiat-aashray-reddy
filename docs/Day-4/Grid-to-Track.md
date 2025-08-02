@@ -254,7 +254,7 @@ tap_decap_or
 run_placement
 ```
 
-:::note
+:::tip
 
 If the commands above don't work, try the following:
 

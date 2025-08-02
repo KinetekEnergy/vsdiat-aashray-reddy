@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\e[42mNode.js & Docusaurus container is active.\e[0m"
+echo -e "\e[42mVSDIAT Website (Node.js & Docusaurus) container is active.\e[0m"
 
 echo -n "(b)uild or (s)tart website? "
 read input

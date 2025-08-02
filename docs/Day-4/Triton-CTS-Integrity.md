@@ -27,11 +27,7 @@ Skew can be caused by:
 
 As a result, some parts of the circuit may receive the clock **earlier or later** than others — potentially leading to **timing violations** such as setup or hold failures.
 
-:::note
-
 Ideally, the skew should be as close to zero as possible.
-
-:::
 
 :::danger[Why This Is a "Bad" Clock Tree]
 

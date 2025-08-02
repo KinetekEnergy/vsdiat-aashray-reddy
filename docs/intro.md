@@ -11,6 +11,10 @@ Welcome! If you're here, then you probably know what VSDIAT is.
 
 This site is for all my notes about what I learned. Is a website overkill? Yes. Does it look good though? Yes.
 
+## Some of your blogs look short
+
+The content in the blogs is actually pretty long! For readability and organizational purposes, I split it up into multiple blogs where I thought it was appropriate. Because the content is divided a lot more, it might have the appearance that it's short when in reality it is not.
+
 ## "I can't see an image" / "This image is too small!"
 
 You can click on any image in the website and it will present a zoomed-in view, allowing you to see it better.

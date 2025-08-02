@@ -9,7 +9,6 @@ sidebar_position: 2
 
 ![wire width drc](./Routing-DRC-Images/parallel-error.png)
 
-
 1. Minimum Wire Width
    1. Ensures wires are thick enough to carry current without breaking or degrading during fabrication.
 2. Minimum Spacing Between Wires

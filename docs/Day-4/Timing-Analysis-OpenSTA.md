@@ -17,7 +17,7 @@ The specifications are as shown in the figure — for example:
 
 Later, a similar analysis can be performed using the **real clock** after the clock tree is implemented, allowing us to measure actual skew, latency, and path delays.
 
-:::note[Vocab]
+:::info[Vocab]
 
 * $\Theta$: The combinational delay — this includes the clock-to-Q delay of the launch flip-flop plus the propagation delay through all logic gates between the launch and capture flip-flops.
 * T (clock period): Also known as the *required time*, this is the total time allocated for the signal to propagate from the launch edge to the capture edge — typically defined by the inverse of the clock frequency.
@@ -70,7 +70,7 @@ Unlike setup analysis (which spans two consecutive rising edges), hold analysis 
 * Clock buffer delays cause the capture flip-flop to receive the clock edge too early
 * The data changes too quickly, violating the hold requirement of the destination flip-flop
 
-:::[Note]
+:::info
 
 * Clock period (T) and setup uncertainty (SU) are irrelevant in hold analysis (since the same rising clock edge is used at both launch and capture flops)
 * Instead, focus is placed on:
@@ -100,7 +100,7 @@ This variation can **affect both clock and data signals**, and becomes especiall
 
 ![uncertainty diagram](./Timing-Analysis-OpenSTA-Images/uncertainty.png)
 
-:::note[Vocab]
+:::info[Vocab]
 
 * SU (Setup Uncertainty): Setup uncertainty arises from jitter — the short-term, unpredictable variation in the clock period caused by non-idealities in the PLL (Phase-Locked Loop). This uncertainty reduces the effective time available for data to propagate and settle before being captured, and must be accounted for during timing closure.
 

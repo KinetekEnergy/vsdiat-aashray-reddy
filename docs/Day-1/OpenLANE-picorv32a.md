@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Open the virtual machine. I used VMWare Workstation Pro, but you can use any other software you want.
 
-:::note
+:::warning
 
 Mac support on Apple Silicon devices is not as good as Linux/Windows/Intel Macs. It is suggested to either:
 
@@ -58,7 +58,7 @@ All the files generated are stored in the `reports/` directory. Open it and see 
 
 Run `cat 1-yosys_4.stat.rpt` to see the synthesis statistics. We will use this to make our calculations.
 
-:::note
+:::warning
 
 The numbers in your file *may* be different. However, the calculation process is still the same.
 
