@@ -45,6 +45,3 @@ After parasitic extraction, the final fabrication-ready file is the GDSII.
 2. Generated GDSII File Location: `runs/26-03_05-49/results/magic/picorv32a.gds`
 3. Read the GDSII in Magic:
    1. You can view and verify the layout by opening the `.gds` file in the Magic GUI.
-
-## Done!
-
