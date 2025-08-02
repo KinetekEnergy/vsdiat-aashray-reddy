@@ -2,18 +2,14 @@
 sidebar_position: 3
 ---
 
-
 # Power Distribution Network (PDN)
 
 ## Build the PDN
 
 ```bash showLineNumbers title="vsduser@vsdsquadron: ~/Desktop/work/tools/openlane_working_dir/openlane"
 # make sure to be in ~/Desktop/work/tools/openlane_working_dir/openlane
-
 docker
-
 ./flow.tcl -interactive
-
 prep -design picorv32a -tag <folder name of the CTS>
 
 # double check the design is the right one
@@ -31,8 +27,7 @@ Check the pitch of the Stdcell Rails section. The pitch should be 2.72, and it r
 
 ![diagram of Power/Ground Pads, Rings, Rails, and Straps](./PDN-Images/power-ground.png)
 
-1. Power is delivered through the pads. The ground is connectd to the pads too.
+1. Power is delivered through the pads. The ground is connected to the pads too.
 2. The power and ground wires are arranged in a ring around the circuits.
 3. Rails for power and ground cross the entire chip, connected to straps.
 4. The rails deliver power and ground to the needed cells.
-

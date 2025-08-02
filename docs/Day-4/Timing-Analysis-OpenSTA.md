@@ -152,10 +152,8 @@ You can replace the weak gate and then re-run the analysis:
 report_net -connections _11672_
 help replace_cell
 
-
 # this replaces the cell
 replace_cell _14513_ sky130_fd_sc_hd__or3_4
-
 
 # generate a timing report
 report_checks -fields {net cap slew input_pins} -digits 4

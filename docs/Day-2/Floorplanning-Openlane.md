@@ -90,10 +90,8 @@ You can hit `S` on your keyboard to select the chip. Then, hit `V` to scale it t
 # run the placement
 run_placement
 
-
 # open generated placement def
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/{date}/results/placement/
-
 
 # open with magic
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &

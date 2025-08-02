@@ -10,14 +10,11 @@ sidebar_position: 3
 # go to home
 cd
 
-
 # download lab files
 wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
 
-
 # extract it
 tar xfz drc_tests.tgz
-
 
 # open lab folder
 cd drc_tests
@@ -29,10 +26,8 @@ cd drc_tests
 # show files
 ls -al
 
-
 # open .magicrc (close by with Ctrl + X)
 nano .magicrc
-
 
 # open it in magic
 magic -d XR &

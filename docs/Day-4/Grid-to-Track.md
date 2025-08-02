@@ -21,7 +21,6 @@ Let's first check our track information.
 ```bash showLineNumbers title="vsduser@vsdsquadron: ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd"
 # go to /Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/openlane/sky130_fd_sc_hd
 
-
 # open the tracks.info file
 less tracks.info
 ```
@@ -51,7 +50,6 @@ We need to open our chip design in Magic. This lets us view everything in an eas
 # go to the vsdstdcelldesign folder
 cd Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign
 
-
 # open it in magic
 magic -T sky130A.tech sky130_inv.mag &
 ```
@@ -63,7 +61,6 @@ magic -T sky130A.tech sky130_inv.mag &
 ```bash title="tkcon 2.3 Main"
 # show grid commands
 % help grid
-
 
 # set the grid
 % grid 0.46um 0.34um 0.23um 0.17um
@@ -81,7 +78,6 @@ Notice how the grid has been properly set and you can see the grid lines:
 Root cell box:
            width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
 
-
 microns:   1.380 x 0.310   ( 0.000,  0.850), ( 1.380,  1.160)  0.428  
 lambda:      138 x 31      (     0,  85   ), (   138,  116  )  4278      
 ```
@@ -91,7 +87,6 @@ lambda:      138 x 31      (     0,  85   ), (   138,  116  )  4278
 % box
 Root cell box:
            width x height  (   llx,  lly  ), (   urx,  ury  )  area (units^2)
-
 
 microns:   0.400 x 2.720   ( 0.450,  0.000), ( 0.850,  2.720)  1.088  
 lambda:       40 x 272     (     45,  0   ), (   85,  272  )   10880      
@@ -132,10 +127,8 @@ The LEF defines the physical characteristics of standard cells, macros, etc.
 # copy LEF
 cp sky130_vsdinv.lef ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
 
-
 # copy lib
 cp libs/sky130_fd_sc_hd__* ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
-
 
 # verify the files are there
 ls ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/
@@ -166,18 +159,15 @@ set ::env(EXTRA_LEFS) [glob $::env(OPENLANE_ROOT)/designs/$::env(DESIGN_NAME)/sr
 # go to the dir
 cd Desktop/work/tools/openlane_working_dir/openlane
 
-
 # open docker env -> openlane -> picorv32a
 docker
 ./flow.tcl -interactive
 package require openlane 0.9
 prep -design picorv32a
 
-
 # set and add our new lefs
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
-
 
 # run the synthesis
 run_synthesis
@@ -201,35 +191,27 @@ Let's fix the issue:
 # re-prep to update everything
 prep -design picorv32a -tag 24-03_10-03 -overwrite
 
-
 # add the lef
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs
 
-
 # display SYNTH_STRATEGY
 echo $::env(SYNTH_STRATEGY)
-
 
 # set new SYNTH_STRATEGY
 set ::env(SYNTH_STRATEGY) "DELAY 3"
 
-
 # display SYNTH_BUFFERING
 echo $::env(SYNTH_BUFFERING)
-
 
 # display current SYNTH_SIZING
 echo $::env(SYNTH_SIZING)
 
-
 # set new  SYNTH_SIZING
 set ::env(SYNTH_SIZING) 1
 
-
 # display SYNTH_DRIVING_CELL
 echo $::env(SYNTH_DRIVING_CELL)
-
 
 # synthesize again
 run_synthesis
@@ -248,7 +230,6 @@ Our slack issues are fixed:
 init_floorplan
 place_io
 tap_decap_or
-
 
 # placement
 run_placement
@@ -280,7 +261,6 @@ detailed_placement
 ```bash showLineNumbers
 # open generated def. remember to change <date> to your latest run (or the run you're using right now)
 cd Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/<date>/results/placement/
-
 
 # load the def in magic now
 magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def &

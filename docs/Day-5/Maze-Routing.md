@@ -2,14 +2,13 @@
 sidebar_position: 1
 ---
 
-
 # Maze Routing
 
 ![route task](./Maze-Routing-Images/route.png)
 
 In order to make the best chip possible while spending the least amount of money, we need to perform good routing. Routing is the process of creating connections between different circuits. Because of the importance of routing, algorithms have been developed to efficiently and optimally create routes.
 
-## Lee's Algoritm
+## Lee's Algorithm
 
 Wires need to be routed around obstacles and macros, ideally in a path that is short, clean (few bends), and legal. Lee’s Algorithm, a classic maze routing algorithm, can help.
 

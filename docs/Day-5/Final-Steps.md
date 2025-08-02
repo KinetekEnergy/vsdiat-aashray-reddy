@@ -25,7 +25,7 @@ OpenLANE **does not** come with a native SPEF (Standard Parasitic Exchange Forma
      * A Python script: `main.py`
      * Required LEF and DEF files
 
-3. **Run the Python Script to Generate SPEF**:
+3. Run the Python Script to Generate SPEF:
 
    ```bash
    python3 main.py \
