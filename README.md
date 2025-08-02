@@ -57,5 +57,4 @@ I would highly recommend checking out [this link](https://docusaurus.io/docs/dep
 
 ## Design
 
-Thr color scheme comes from [Google's Material 3](https://m3.material.io/styles/color/static/baseline).
-
+The color scheme comes from [Google's Material 3](https://m3.material.io/styles/color/static/baseline).
